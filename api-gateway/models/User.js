@@ -1,3 +1,5 @@
+/** @format */
+
 /*
 ============================================
 ; Title:  API-Gateway
@@ -7,12 +9,12 @@
 ;===========================================
 */
 
-var express = require('express');
-var router = express.Router();
+var mongoose = require("mongoose");
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+var userSchema = new mongoose.Schema({
+  username: String,
+  password: String,
+  email: String,
 });
 
-module.exports = router;
+module.exports = mongoose.model("User", userSchema);

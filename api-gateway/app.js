@@ -16,13 +16,13 @@ var logger = require("morgan");
 var mongoose = require("mongoose");
 var apiCatalog = require("./routes/api-catalog");
 var indexRouter = require("./routes/index");
-// var usersRouter = require('./routes/users');
+var usersRouter = require("./routes/users");
 
 mongoose.Promise = require("bluebird");
 
 mongoose
   .connect(
-    "mongodb+srv://admin:admin@cluster0.lti6z.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    "mongodb+srv://jondisla:Casfm07@cluster0.lti6z.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
     {
       promiseLibrary: require("bluebird"),
     }
